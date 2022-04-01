@@ -7,6 +7,7 @@ import Services from "./components/Services.vue";
 import WhyPick from "./components/WhyPick.vue";
 import Team from "./components/Team.vue";
 import BannerBottom from "./components/BannerBottom.vue";
+import TheFooter from "./components/TheFooter.vue";
 </script>
 
 <template>
@@ -19,6 +20,7 @@ import BannerBottom from "./components/BannerBottom.vue";
     <WhyPick></WhyPick>
     <Team></Team>
     <BannerBottom></BannerBottom>
+    <TheFooter></TheFooter>
   </div>
 </template>
 
