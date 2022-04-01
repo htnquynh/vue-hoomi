@@ -4,6 +4,7 @@ import Hero from "./components/Hero.vue";
 import Features from "./components/Features.vue";
 import Products from "./components/Products.vue";
 import Services from "./components/Services.vue";
+import WhyPick from "./components/WhyPick.vue";
 </script>
 
 <template>
@@ -13,6 +14,7 @@ import Services from "./components/Services.vue";
     <Features></Features>
     <Products></Products>
     <Services></Services>
+    <WhyPick></WhyPick>
   </div>
 </template>
 
