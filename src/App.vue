@@ -2,6 +2,7 @@
 import TheHeader from "./components/TheHeader.vue";
 import Hero from "./components/Hero.vue";
 import Features from "./components/Features.vue";
+import Products from "./components/Products.vue";
 </script>
 
 <template>
@@ -9,6 +10,7 @@ import Features from "./components/Features.vue";
     <TheHeader></TheHeader>
     <Hero></Hero>
     <Features></Features>
+    <Products></Products>
   </div>
 </template>
 

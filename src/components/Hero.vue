@@ -21,7 +21,7 @@
             <div class="flex gap-6 items-center">
               <a
                 href="#"
-                class="inline-block uppercase bg-tomato-500 text-white px-8 py-3 rounded-sm"
+                class="inline-block uppercase bg-tomato-500 text-white px-8 py-3 rounded-5px"
                 >Request a quote</a
               >
               <a
