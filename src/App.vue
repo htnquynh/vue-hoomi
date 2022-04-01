@@ -6,6 +6,7 @@ import Products from "./components/Products.vue";
 import Services from "./components/Services.vue";
 import WhyPick from "./components/WhyPick.vue";
 import Team from "./components/Team.vue";
+import BannerBottom from "./components/BannerBottom.vue";
 </script>
 
 <template>
@@ -17,6 +18,7 @@ import Team from "./components/Team.vue";
     <Services></Services>
     <WhyPick></WhyPick>
     <Team></Team>
+    <BannerBottom></BannerBottom>
   </div>
 </template>
 
