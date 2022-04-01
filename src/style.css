@@ -25,6 +25,18 @@
 
 @font-face {
   font-family: "Circular Std";
+  src: url("/assets/fonts/CircularStd-Bold.eot");
+  src: local("Circular Std Bold"), local("Circular Std-Bold"),
+    url("/assets/fonts/CircularStd-Bold.eot?#iefix") format("embedded-opentype"),
+    url("/assets/fonts/CircularStd-Bold.woff") format("woff"),
+    url("assets/fonts/CircularStd-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Circular Std";
   src: url("/assets/fonts/CircularStd-Black.eot");
   src: local("Circular Std Black"), local("Circular Std-Black"),
     url("/assets/fonts/CircularStd-Black.eot?#iefix")

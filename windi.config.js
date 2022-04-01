@@ -42,6 +42,7 @@ export default defineConfig({
         feature: "0px 0px 50px rgba(139, 141, 164, 0.17)",
         "product-icon": "0px 0px 50px rgba(131, 134, 153, 0.19)",
         product: "0px 40px 80px rgba(120, 122, 141, 0.07)",
+        team: "0px 40px 60px rgba(190, 190, 190, 0.25)",
       },
       transitionProperty: {
         top: "top",
