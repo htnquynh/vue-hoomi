@@ -1,4 +1,14 @@
-export default {
+import { defineConfig } from "windicss/helpers";
+
+const useBackgroundColors = ["#F0F1FF", "#FFF0EB", "#FFF8E0", "#F0F6FF"];
+
+const useTextColors = ["#3B4EFF", "#F76031", "#FFCE33", "#3485FF"];
+
+export default defineConfig({
+  safelist: [
+    useBackgroundColors.map((i) => `bg-[${i}]`),
+    useTextColors.map((i) => `text-[${i}]`),
+  ],
   theme: {
     extend: {
       fontFamily: {
@@ -73,4 +83,4 @@ export default {
     require("windicss/plugin/aspect-ratio"),
     require("windicss/plugin/line-clamp"),
   ],
-};
+});
