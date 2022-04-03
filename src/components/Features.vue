@@ -1,6 +1,6 @@
 <template>
-  <section class="">
-    <div class="container py-24">
+  <section class="py-24">
+    <div class="container">
       <div class="space-y-12 md:space-16 lg:space-y-24">
         <div class="text-center relative">
           <img
@@ -20,7 +20,7 @@
           />
 
           <h2
-            class="inline-block text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-80px font-black max-w-3xl"
+            class="inline-block text-4xl sm:text-5xl md:text-6xl lg:text-7xl 2xl:text-80px font-black max-w-3xl"
           >
             <span class="text-deep-blue-500">Answers</span> For Every Stage Of
             <span class="text-deep-blue-500">Life</span>
