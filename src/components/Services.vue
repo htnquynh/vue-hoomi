@@ -1,14 +1,28 @@
 <template>
   <section class="py-24">
     <div class="container">
-      <div class="flex">
-        <div class="w-6/12">
-          <div class="space-y-16">
+      <div class="flex flex-col gap-8 md:flex-row">
+        <div class="md:w-6/12">
+          <div class="space-y-10 relative">
             <div class="space-y-8">
-              <h2 class="text-80px font-black">
+              <h2
+                class="relative text-4xl lg:text-6xl 2xl:text-80px font-black"
+              >
                 Get The Right
                 <span class="text-deep-blue-500">Protection</span> To Keep
                 Moving <span class="text-deep-blue-500">Forward</span>
+
+                <img
+                  src="/assets/img/service-decor-1.png"
+                  alt="Feature"
+                  class="absolute -top-16 -left-4"
+                />
+
+                <img
+                  src="/assets/img/service-decor-2.png"
+                  alt="Feature"
+                  class="absolute -top-8 -right-8"
+                />
               </h2>
               <p>
                 Adding to your family means adding to your financial needs.
@@ -16,30 +30,32 @@
                 loved ones.
               </p>
             </div>
-            <a
-              href="#"
-              class="inline-block uppercase bg-tomato-500 text-white px-8 py-3 rounded-5px"
-            >
-              Explore our product
-            </a>
+            <ButtonSolid> Explore our product </ButtonSolid>
+            <img
+              src="/assets/img/service-decor-3.png"
+              alt="Feature"
+              class="absolute bottom-0 right-4"
+            />
           </div>
         </div>
-        <div class="w-6/12">
+        <div class="md:w-6/12 relative">
+          <img
+            src="/assets/img/service-decor-4.png"
+            alt="Feature"
+            class="absolute -bottom-16 -left-16"
+          />
+          <img
+            src="/assets/img/service-decor-5.png"
+            alt="Feature"
+            class="absolute z-10 -top-16 -right-16"
+          />
           <div class="grid grid-cols-2 gap-8">
             <div
               v-for="item in services"
               :key="item.id"
               :class="{ 'transform translate-y-10': item.id % 2 }"
             >
-              <div :class="['p-8 text-center', `bg-[${item.background}]`]">
-                <p>{{ item.meta }}</p>
-                <h3
-                  :class="['pt-2 text-3xl font-medium', `text-[${item.color}]`]"
-                >
-                  {{ item.focusText }}
-                </h3>
-                <p class="pt-4 opacity-80">{{ item.content }}</p>
-              </div>
+              <ServiceCard :item="item" />
             </div>
           </div>
         </div>
@@ -49,7 +65,13 @@
 </template>
 
 <script>
+import ButtonSolid from "./buttons/ButtonSolid.vue";
+import ServiceCard from "./ServiceCard.vue";
 export default {
+  components: {
+    ServiceCard,
+    ButtonSolid,
+  },
   data: () => ({
     services: [
       {
