@@ -4,19 +4,30 @@
       <div class="flex">
         <div class="w-7/12">
           <div class="">
-            <div>
-              <p class="inline-block bg-tomato-200 py-2 px-3">
-                Hoomi for Homebodies
-              </p>
-              <h1 class="text-110px leading-130px">
-                <span class="text-deep-blue-500 font-black">Insurance</span>
-                That's All About
-                <span class="text-deep-blue-500 font-black">You</span>
-              </h1>
-              <p class="text-xl">
-                An easy, affordable and dependable way to look after the people
-                you love.
-              </p>
+            <div class="relative">
+              <div>
+                <p class="inline-block bg-tomato-200 py-2 px-3">
+                  Hoomi for Homebodies
+                </p>
+                <h1 class="text-110px leading-130px">
+                  <span class="text-deep-blue-500 font-black">Insurance</span>
+                  That's All About
+                  <span class="text-deep-blue-500 font-black">You</span>
+                </h1>
+                <p class="text-xl">
+                  An easy, affordable and dependable way to look after the
+                  people you love.
+                </p>
+              </div>
+              <div
+                class="absolute top-8 -right-28 w-56 py-9 px-3 bg-white shadow-hero-small"
+              >
+                <p class="font-bold">25 million+ Customer</p>
+                <p class="">
+                  People trust us to insure what's important to them.
+                </p>
+                <div></div>
+              </div>
             </div>
             <div class="flex gap-6 items-center">
               <a

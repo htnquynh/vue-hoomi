@@ -11,17 +11,15 @@ import TheFooter from "./components/TheFooter.vue";
 </script>
 
 <template>
-  <div>
-    <TheHeader></TheHeader>
-    <Hero></Hero>
-    <Features></Features>
-    <Products></Products>
-    <Services></Services>
-    <WhyPick></WhyPick>
-    <Team></Team>
-    <BannerBottom></BannerBottom>
-    <TheFooter></TheFooter>
-  </div>
+  <TheHeader></TheHeader>
+  <Hero></Hero>
+  <Features></Features>
+  <Products></Products>
+  <Services></Services>
+  <WhyPick></WhyPick>
+  <Team></Team>
+  <BannerBottom></BannerBottom>
+  <TheFooter></TheFooter>
 </template>
 
 <style></style>

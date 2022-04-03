@@ -1,5 +1,5 @@
 <template>
-  <div v-html="svg"></div>
+  <span v-html="svg" class="leading-0"></span>
 </template>
 
 <script>

@@ -1,19 +1,63 @@
 <template>
   <section class="">
     <div class="container py-24">
-      <div class="space-y-24">
-        <div class="text-center">
-          <h2 class="inline-block text-80px font-black max-w-3xl">
+      <div class="space-y-12 md:space-16 lg:space-y-24">
+        <div class="text-center relative">
+          <img
+            src="/assets/img/feature-decor-1.png"
+            alt="Feature"
+            class="absolute -z-1 -top-16 -left-4"
+          />
+          <img
+            src="/assets/img/feature-decor-2.png"
+            alt="Feature"
+            class="absolute -z-1 -bottom-4 left-20"
+          />
+          <img
+            src="/assets/img/feature-decor-3.png"
+            alt="Feature"
+            class="absolute -z-1 -top-8 -right-4"
+          />
+
+          <h2
+            class="inline-block text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-80px font-black max-w-3xl"
+          >
             <span class="text-deep-blue-500">Answers</span> For Every Stage Of
             <span class="text-deep-blue-500">Life</span>
           </h2>
         </div>
         <div>
-          <div class="flex gap-10">
-            <div class="w-1/3 shadow-feature rounded-2xl">
-              <div class="pb-8"></div>
-              <div class="px-8 py-4 bg-f1 flex justify-between items-center">
-                <svg
+          <div class="flex flex-col gap-8 items-center lg:flex-row lg:gap-10">
+            <div
+              v-for="item in features"
+              :key="item.id"
+              class="max-w-lg mx-auto lg:flex-1 shadow-feature rounded-2xl"
+            >
+              <FeatureCard :item="item" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</template>
+
+<script>
+// import IconWrapper from "./IconWrapper.vue";
+import FeatureCard from "./FeatureCard.vue";
+export default {
+  components: {
+    // IconWrapper,
+    FeatureCard,
+  },
+  data: () => ({
+    features: [
+      {
+        id: 0,
+        title: "Planning a Life Together",
+        content:
+          "Adding to your family means adding to your financial needs. We’re here to guide you as you work to secure the future of your loved ones.",
+        svg: `<svg
                   height="36"
                   viewBox="0 0 100 59"
                   fill="none"
@@ -39,41 +83,15 @@
                     d="M0.556325 23.3804C1.34397 22.7171 2.93308 23.111 4.384 24.0368C4.77783 24.3062 5.17856 24.7 5.44111 25.0939C7.02331 26.683 14.6856 35.5337 14.8168 35.6649L14.955 35.9275H14.8168C13.1034 36.19 12.0463 36.8464 11.7837 37.7791C11.5143 39.0988 12.5714 40.8123 15.0794 42.5257C17.3318 43.9836 20.3649 45.4345 24.0613 46.7541C23.6675 46.6229 23.2737 46.3603 22.8729 46.0978C20.3649 44.6468 18.1194 43.4585 16.406 42.2632C13.7597 40.4184 12.8339 39.0988 13.2346 37.9035C13.4972 37.1158 14.2917 36.7151 15.4801 36.9846C16.7998 36.9846 19.1765 37.9035 21.422 38.8362C23.0042 39.4926 24.462 40.0246 25.5191 40.2872C29.3468 41.3443 33.3058 42.4014 37.1404 45.0407C37.6655 45.4345 38.3287 45.9665 38.8538 46.3603C41.6313 48.7371 44.1394 51.1138 46.7856 53.76L47.1794 54.0226L38.5913 58.1197C37.9349 57.4564 37.1404 56.7932 36.3458 56.2681C35.2956 55.4735 34.3629 54.9484 33.3058 54.5477C31.8549 54.0226 28.2897 52.8273 24.8559 51.6458C21.2907 50.4575 17.8569 49.2691 16.6685 48.8683C15.874 48.4745 15.3419 48.205 14.6856 47.6799C13.2346 46.7541 12.0463 44.9094 10.9892 43.3203C10.7197 42.7952 10.3328 42.2632 10.0633 41.6068L0.556325 26.2823C-0.369504 24.5688 0.0243189 23.7742 0.556325 23.3804Z"
                     fill="#3B4EFF"
                   />
-                </svg>
-                <a
-                  href="#"
-                  class="flex items-center gap-2 text-tomato-500 uppercase font-medium"
-                >
-                  Learn more
-                  <svg
-                    class="inline-block"
-                    height="14"
-                    viewBox="0 0 23 16"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M22.7071 8.70711C23.0976 8.31658 23.0976 7.68342 22.7071 7.29289L16.3431 0.928932C15.9526 0.538408 15.3195 0.538408 14.9289 0.928932C14.5384 1.31946 14.5384 1.95262 14.9289 2.34315L20.5858 8L14.9289 13.6569C14.5384 14.0474 14.5384 14.6805 14.9289 15.0711C15.3195 15.4616 15.9526 15.4616 16.3431 15.0711L22.7071 8.70711ZM0 9H22V7H0V9Z"
-                      fill="#F76031"
-                    />
-                  </svg>
-                </a>
-              </div>
-              <div class="p-8 space-y-6">
-                <h4 class="text-2xl leading-6 font-medium">
-                  Planning a Life Together
-                </h4>
-                <p>
-                  Adding to your family means adding to your financial needs.
-                  We’re here to guide you as you work to secure the future of
-                  your loved ones.
-                </p>
-              </div>
-            </div>
-            <div class="w-1/3 shadow-feature rounded-2xl">
-              <div class="pb-8"></div>
-              <div class="px-8 py-4 bg-f2 flex justify-between items-center">
-                <svg
+                </svg>`,
+        backgroundColor: "#FFF8E1",
+      },
+      {
+        id: 1,
+        title: "Growing your Family",
+        content:
+          "Adding to your family means adding to your financial needs. We’re here to guide you as you work to secure the future of your loved ones.",
+        svg: `<svg
                   height="36"
                   viewBox="0 0 67 63"
                   fill="none"
@@ -95,42 +113,15 @@
                     d="M24.8499 24.5815C24.3189 25.378 23.6481 26.0488 23.3826 26.8524C21.1117 31.3941 17.7718 34.8668 14.2991 38.3395C13.2301 39.2758 12.8248 40.3378 12.9645 41.6794C12.9645 47.6884 12.9645 53.6975 12.9645 59.7066C12.9645 61.0481 13.0973 62.3827 11.3574 62.3827C9.6246 62.3827 9.22634 61.3136 9.22634 59.8463C9.35909 56.7719 9.3591 53.8303 9.3591 50.8956C9.22634 50.0921 9.75735 48.7575 8.42278 48.7575C7.22097 48.7575 7.48651 50.0921 7.48651 50.7559C7.48651 53.6975 7.48651 56.5064 7.48651 59.441C7.48651 60.7756 7.75902 62.3827 5.61392 62.3827C3.74832 62.3827 3.88105 60.7756 3.88105 59.5738C3.88105 53.97 4.01381 48.6247 3.88105 43.1467C3.88105 42.2104 4.27935 41.2741 2.81202 39.8068C2.81202 42.3501 2.81202 44.2158 2.81202 46.0883C2.81202 47.2902 3.07754 48.492 1.33771 48.492C-0.129619 48.492 0.00311541 47.2902 0.00311541 46.2211C0.00311541 44.083 0.00311541 42.0776 0.00311541 39.8068C0.00311541 37.5359 1.0722 36.2014 3.61557 36.3341C5.61393 36.4669 7.48651 36.3341 9.49186 36.3341C12.9645 36.3341 14.2991 35.1323 15.8992 32.0649C18.8408 26.1816 22.1808 20.438 26.1845 15.3653C27.3863 13.7582 28.8606 12.6961 30.859 14.5617C32.0608 15.6308 33.8006 15.498 35.0024 14.429C36.6025 12.9617 37.6785 13.6254 39.0131 14.8272C40.746 16.4343 41.822 18.4327 43.0168 20.438C44.8894 23.5124 48.5016 26.4256 50.5 29.5C50.6611 29.7478 51.0329 30.1923 51.1656 30.325C52.2277 31.1286 53.702 31.5269 55.7073 31.5269C57.9712 31.5269 60.3819 31.6596 62.6458 31.5269C65.5874 31.5269 66.922 32.9942 66.922 35.6633C66.922 38.2067 66.922 40.7431 66.922 43.2795C66.922 44.4813 67.0547 45.9556 65.3219 45.9556C63.3165 45.9556 63.582 44.4813 63.582 43.1467C63.582 40.8758 63.582 38.605 63.582 35.6633C61.8492 37.4032 62.2475 38.4722 62.2475 39.5413C62.2475 46.0883 62.2475 52.4957 62.2475 59.0428C62.2475 60.5101 62.513 62.3827 60.2491 62.3827C57.8385 62.3827 57.9713 60.5101 57.9713 58.7773C57.9713 55.4373 57.9713 52.0974 57.9713 48.6247C57.9713 47.8212 58.3765 46.2211 57.0419 46.2211C55.3021 46.2211 55.9729 47.8212 55.9729 48.7575C55.8401 52.3629 55.9729 55.8356 55.9729 59.3083C55.9729 61.0481 55.4349 62.5154 53.5623 62.3827C51.4312 62.3827 51.5639 60.6429 51.5639 59.3083C51.5639 52.0974 51.5639 45.0193 51.5639 37.8014C51.6967 33.7977 49.5 34.5 47.4204 31.9251C45.6403 29.721 42.0875 26.5799 40.3477 24.5815C41.5495 28.5852 42.7513 32.5959 43.9531 36.4669C44.8894 40.0723 44.4841 40.7431 40.746 40.7431C38.7476 40.6103 38.4751 41.4139 38.4751 43.1467C38.4751 48.2265 38.4751 53.2992 38.4751 58.372C38.4751 60.2446 38.4751 62.3827 36.0715 62.3827C33.8006 62.3827 33.9334 60.2446 33.9334 58.5117C33.9334 53.5647 33.9334 48.492 33.9334 43.545C33.9334 42.6157 34.6042 40.8758 32.8643 40.8758C30.9917 40.8758 31.7952 42.6157 31.7952 43.4122C31.7952 48.6247 31.7952 53.6975 31.7952 59.0428C31.7952 60.5101 31.5297 61.9774 29.9297 62.2499C27.7915 62.6482 27.2605 61.0481 27.2605 59.3083C27.2605 54.1028 27.1208 48.7575 27.2605 43.545C27.2605 41.4139 26.7225 40.6103 24.4516 40.7431C21.3772 40.8758 20.8462 39.9395 21.6427 37.0049C22.8515 32.9942 24.0533 28.9905 25.2482 24.847C25.1154 24.7143 24.9826 24.7143 24.8499 24.5815Z"
                     fill="#3B4EFF"
                   />
-                </svg>
-
-                <a
-                  href="#"
-                  class="flex items-center gap-2 text-tomato-500 uppercase font-medium"
-                >
-                  Learn more
-                  <svg
-                    class="inline-block"
-                    height="14"
-                    viewBox="0 0 23 16"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M22.7071 8.70711C23.0976 8.31658 23.0976 7.68342 22.7071 7.29289L16.3431 0.928932C15.9526 0.538408 15.3195 0.538408 14.9289 0.928932C14.5384 1.31946 14.5384 1.95262 14.9289 2.34315L20.5858 8L14.9289 13.6569C14.5384 14.0474 14.5384 14.6805 14.9289 15.0711C15.3195 15.4616 15.9526 15.4616 16.3431 15.0711L22.7071 8.70711ZM0 9H22V7H0V9Z"
-                      fill="#F76031"
-                    />
-                  </svg>
-                </a>
-              </div>
-              <div class="p-8 space-y-6">
-                <h4 class="text-2xl leading-6 font-medium">
-                  Growing your Family
-                </h4>
-                <p>
-                  Adding to your family means adding to your financial needs.
-                  We're here to guide you as you work to secure the future of
-                  your loved ones.
-                </p>
-              </div>
-            </div>
-            <div class="w-1/3 shadow-feature rounded-2xl">
-              <div class="pb-8"></div>
-              <div class="px-8 py-4 bg-f3 flex justify-between items-center">
-                <svg
+                </svg>`,
+        backgroundColor: "#EDEFFF",
+      },
+      {
+        id: 2,
+        title: "Moving Toward Retirement",
+        content:
+          "Adding to your family means adding to your financial needs. We’re here to guide you as you work to secure the future of your loved ones.",
+        svg: `<svg
                   height="36"
                   viewBox="0 0 42 63"
                   fill="none"
@@ -152,69 +143,8 @@
                     d="M19.8951 22.4451H19.1359C13.0578 22.1935 8.25098 17.2145 8.25098 11.1409C8.25098 4.97897 13.3094 0 19.5552 0C25.801 0 30.7799 4.97897 30.7799 11.1409C30.7799 17.2145 25.9687 22.1935 19.8951 22.4451Z"
                     fill="#3B4EFF"
                   />
-                </svg>
-
-                <a
-                  href="#"
-                  class="flex items-center gap-2 text-tomato-500 uppercase font-medium"
-                >
-                  Learn more
-                  <svg
-                    class="inline-block"
-                    height="14"
-                    viewBox="0 0 23 16"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M22.7071 8.70711C23.0976 8.31658 23.0976 7.68342 22.7071 7.29289L16.3431 0.928932C15.9526 0.538408 15.3195 0.538408 14.9289 0.928932C14.5384 1.31946 14.5384 1.95262 14.9289 2.34315L20.5858 8L14.9289 13.6569C14.5384 14.0474 14.5384 14.6805 14.9289 15.0711C15.3195 15.4616 15.9526 15.4616 16.3431 15.0711L22.7071 8.70711ZM0 9H22V7H0V9Z"
-                      fill="#F76031"
-                    />
-                  </svg>
-                </a>
-              </div>
-              <div class="p-8 space-y-6">
-                <h4 class="text-2xl leading-6 font-medium">
-                  Moving Toward Retirement
-                </h4>
-                <p>
-                  Adding to your family means adding to your financial needs.
-                  We're here to guide you as you work to secure the future of
-                  your loved ones.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-</template>
-
-<script>
-export default {
-  data: () => ({
-    features: [
-      {
-        title: "Planning a Life Together",
-        content:
-          "Adding to your family means adding to your financial needs. We’re here to guide you as you work to secure the future of your loved ones.",
-        svg: "feature-1.svg",
-        color: "bg-#FFF8E1",
-      },
-      {
-        title: "Growing your Family",
-        content:
-          "Adding to your family means adding to your financial needs. We’re here to guide you as you work to secure the future of your loved ones.",
-        svg: "feature-2.svg",
-        color: "#EDEFFF",
-      },
-      {
-        title: "Moving Toward Retirement",
-        content:
-          "Adding to your family means adding to your financial needs. We’re here to guide you as you work to secure the future of your loved ones.",
-        svg: "feature-3.svg",
-        color: "#FFF3EF",
+                </svg>`,
+        backgroundColor: "#FFF3EF",
       },
     ],
   }),
