@@ -14,7 +14,7 @@
             class="absolute -z-1 -top-12 right-8"
           />
           <h2
-            class="mx-auto text-center text-4xl sm:text-5xl md:text-6xl lg:text-7xl 2xl:text-80px font-black max-w-3xl"
+            class="mx-auto text-center text-4xl lg:text-6xl 2xl:text-80px font-black max-w-3xl"
           >
             Our <span class="text-deep-blue-500">Financial Agents</span> Are
             Ready To Help You

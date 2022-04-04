@@ -1,17 +1,29 @@
 <template>
-  <section class="py-24 bg-light-blue">
-    <div class="container">
-      <div class="space-y-24">
-        <div class="flex">
-          <div class="w-6/12">
-            <img
-              src="/assets/img/products-illustration.png"
-              alt="Products illustration"
-            />
+  <section class="pb-24 bg-light-blue">
+    <div class="">
+      <div class="space-y-16 lg:space-y-24">
+        <div
+          class="pr-1rem sm:pr-2rem md:pr-3rem lg:pr-4rem xl:pr-5rem 2xl:pr-6rem flex flex-col md:flex-row"
+        >
+          <div class="md:w-6/12 relative">
+            <div class="bg-white rounded-br-5xl pt-8 md:px-8">
+              <img
+                src="/assets/img/products-illustration.png"
+                alt="Products illustration"
+              />
+            </div>
+            <div
+              class="space-y-1 md:space-y-4 absolute top-2 right-2 w-32 sm:w-44 lg:w-52 py-4 px-2 lg:py-8 lg:px-4 text-center rounded-2xl bg-white shadow-product-small"
+            >
+              <p class="font-bold">50+ Products</p>
+              <p class="text-xs lg:text-sm opacity-80">
+                People trust us to insure what's important to them.
+              </p>
+            </div>
           </div>
-          <div class="w-6/12">
-            <div>
-              <h2 class="text-80px font-black">
+          <div class="md:w-6/12 px-1rem sm:px-2rem lg:px-4rem pt-8 lg:pt-24">
+            <div class="space-y-8">
+              <h2 class="text-4xl lg:text-6xl 2xl:text-80px font-black">
                 Find <span class="text-deep-blue-500">Insurance</span> For You &
                 Your <span class="text-deep-blue-500">Family</span>
               </h2>
@@ -27,30 +39,15 @@
             </div>
           </div>
         </div>
-        <div class="space-y-14">
-          <div class="flex gap-10">
-            <div
-              v-for="(item, index) in products"
-              :key="index"
-              class="w-1/4 py-8 px-6 space-y-8 bg-white shadow-product rounded-2xl"
-            >
-              <IconWrapper
-                :svg="item.svg"
-                class="w-max mx-auto rounded-full p-3 shadow-product-icon"
-              />
-              <div class="space-y-5 text-center">
-                <h4 class="text-xl font-medium">{{ item.title }}</h4>
-                <p class="">{{ item.content }}</p>
-              </div>
+
+        <div class="container space-y-14">
+          <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
+            <div v-for="(item, index) in products" :key="index" class="">
+              <ProductCard :item="item" />
             </div>
           </div>
           <div class="text-center">
-            <a
-              href="#"
-              class="inline-block uppercase bg-tomato-500 text-white px-8 py-3 rounded-5px"
-            >
-              Explore our product
-            </a>
+            <ButtonSolid>Explore our product</ButtonSolid>
           </div>
         </div>
       </div>
@@ -60,9 +57,13 @@
 
 <script>
 import IconWrapper from "./IconWrapper.vue";
+import ProductCard from "./ProductCard.vue";
+import ButtonSolid from "./buttons/ButtonSolid.vue";
 export default {
   components: {
     IconWrapper,
+    ProductCard,
+    ButtonSolid,
   },
   data: () => ({
     svg: "LifeInsurance",
