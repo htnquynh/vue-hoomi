@@ -1,15 +1,17 @@
 <template>
-  <section>
-    <div class="container">
-      <div class="flex">
-        <div class="w-7/12">
-          <div class="">
+  <section class="bg-[#ECEEFF]">
+    <div class="">
+      <div class="flex flex-col md:flex-row">
+        <div
+          class="md:w-6/12 px-1rem py-14 sm:px-2rem md:px-3rem lg:px-4rem lg:py-24 bg-white rounded-tr-5xl"
+        >
+          <div class="space-y-8">
             <div class="relative">
-              <div>
+              <div class="space-y-6">
                 <p class="inline-block bg-tomato-200 py-2 px-3">
                   Hoomi for Homebodies
                 </p>
-                <h1 class="text-110px leading-130px">
+                <h1 class="text-5xl lg:text-7xl 2x:text-110px">
                   <span class="text-deep-blue-500 font-black">Insurance</span>
                   That's All About
                   <span class="text-deep-blue-500 font-black">You</span>
@@ -20,16 +22,44 @@
                 </p>
               </div>
               <div
-                class="absolute top-8 -right-28 w-56 py-9 px-3 bg-white shadow-hero-small"
+                class="hidden md:block md:absolute md:z-20 md:-top-12 md:-right-32 w-44 lg:-top-16 lg:-right-48 lg:w-56 py-4 px-1 ld:py-9 lg:px-3 bg-white rounded-3xl shadow-hero-small"
               >
-                <p class="font-bold">25 million+ Customer</p>
-                <p class="">
-                  People trust us to insure what's important to them.
-                </p>
-                <div></div>
+                <div class="text-center space-y-4">
+                  <p class="font-bold">25 million+ Customer</p>
+                  <p class="text-sm">
+                    People trust us to insure what's important to them.
+                  </p>
+                  <div class="flex justify-center transform translate-x-4">
+                    <img
+                      src="/assets/img/hero-avatar-1.png"
+                      class="w-8"
+                      alt="Hero"
+                    />
+                    <img
+                      src="/assets/img/hero-avatar-2.png"
+                      class="w-8 transform -translate-x-2"
+                      alt="Hero"
+                    />
+                    <img
+                      src="/assets/img/hero-avatar-3.png"
+                      class="w-8 transform -translate-x-4"
+                      alt="Hero "
+                    />
+                    <img
+                      src="/assets/img/hero-avatar-4.png"
+                      class="w-8 transform -translate-x-6"
+                      alt="Hero "
+                    />
+                    <span
+                      class="w-8 h-8 bg-[#3B4EFF] rounded-full transform -translate-x-8 text-xs text-white text-center py-2"
+                    >
+                      25m+</span
+                    >
+                  </div>
+                </div>
               </div>
             </div>
-            <div class="flex gap-6 items-center">
+            <div class="flex flex-wrap gap-6 items-center">
               <a
                 href="#"
                 class="inline-block uppercase bg-tomato-500 text-white px-8 py-3 rounded-5px"
@@ -58,7 +88,8 @@
             </div>
           </div>
         </div>
-        <div class="w-5/12">
+
+        <div class="md:w-6/12">
           <img
             src="/assets/img/hero-illustration.png"
             alt="Hero illustration"

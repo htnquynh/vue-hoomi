@@ -1,5 +1,5 @@
 <template>
-  <header class="py-6">
+  <header class="bg-[#ECEEFF] py-6">
     <div class="container">
       <div class="flex justify-between items-center">
         <div>
