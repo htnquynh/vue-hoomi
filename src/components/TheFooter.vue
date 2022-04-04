@@ -15,12 +15,12 @@
         <img
           src="/assets/img/footer-vector-1.png"
           alt="Footer"
-          class="absolute bottom-0 -left-1/6"
+          class="absolute bottom-0 -left-1/6 transform scale-60 sm:scale-100 origin-bottom-left"
         />
         <img
           src="/assets/img/footer-vector-2.png"
           alt="Footer"
-          class="absolute bottom-0 -right-1/6"
+          class="absolute bottom-0 -right-1/6 transform scale-60 sm:scale-100 origin-bottom-right"
         />
         <img
           src="/assets/img/footer-decor-3.png"
